@@ -116,6 +116,7 @@ while True:
                     print("It was a draw.")
                     gameIsPlaying = False
                 else:
+                    drawBoard(theBoard)
                     time.sleep(1)
                     turn = "computer"
         else:
