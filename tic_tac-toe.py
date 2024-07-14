@@ -12,8 +12,8 @@ def drawBoard(board):
 
 def inputPlayerLetter():
     letter = ''
-    while not (letter == "X")or (letter == "0"):
-        letter = input("Do you want to be X or O").upper()
+    while not (letter == "X")or (letter == "O"):
+        letter = input("Do you want to be X or O? ").upper()
     if letter == "O":
         return ["O", "X"]
     else:
@@ -49,7 +49,7 @@ def isSpaceFree(board, move):
 def getPlayerMove(board):
     move = " "
     while move not in '1 2 3 4 5 6 7 8 9'.split() or not isSpaceFree(board, int(move)):
-        move = input("Enter a number between 0 and 10 to place your move")
+        move = input("Enter a number to place your move (1-9): ")
     return int(move)
 
 def chooseRandomMoveFromList(board, movesList):
@@ -116,6 +116,7 @@ while True:
                     print("It was a draw.")
                     gameIsPlaying = False
                 else:
+                    time.sleep(1)
                     turn = "computer"
         else:
             computerMove = getComputermove(theBoard, computerLetter)
