@@ -12,7 +12,7 @@ def drawBoard(board):
 
 def inputPlayerLetter():
     letter = ''
-    while not (letter == "X")or not (letter == "O"):
+    while not (letter == "X" or letter == "O"):
         letter = input("Do you want to be X or O? ").upper()
     if letter == "O":
         return ["O", "X"]
